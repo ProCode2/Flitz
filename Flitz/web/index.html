@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flitz</title>
+
+		<!-- Compiled and minified CSS -->
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+	    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+	    <link href="https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
+
+
+  		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+</head>
+<body>
+
+	<h1 class="center flitz">Flitz</h1>
+	<h5 class="center flitz-dialouge">The illusion To-Do App</h5>
+	<hr>
+	<div class="container">
+		
+		  <div class="row">
+		    <form class="col s12">
+		      <div class="row">
+		        <div class="input-field col s12">
+		          <textarea id="textarea1" class="materialize-textarea" name='task'></textarea>
+		          <label for="textarea1">message</label>
+  			</div>
+		   </div>
+		    </form>
+		    	 <button class="btn waves-effect waves-light" id="button" type="submit">Submit
+    			<i class="material-icons right">send</i>
+  				</button>
+		  </div>	
+	</div>	
+		<section class="container">
+			<ul id = "todo">
+				
+			</ul>
+		</section>
+
+
+		<script
+	  src="https://code.jquery.com/jquery-3.4.1.min.js"
+	  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+	  crossorigin="anonymous"></script>
+
+
+	<!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  
+</body>
+  <script type="text/javascript">
+    	
+    	 $(document).ready(function () {
+    	 	 $('#button').click(function () {
+        $('#todo').append("<ul><blockquote>" + $("textarea[name=task]").val() + "<a href='#'><i class='material-icons'>add</i></a></blockquote></ul>");
+       $("textarea[name=task]").val('');
+    });
+     $("body").on('click', '#todo a', function () {
+        $(this).closest("ul").remove();
+    });
+});
+    </script>
+
+    <footer class="page-footer">
+	 <div class="footer-copyright">
+            <div class="container">
+            © 2014 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+          </div>
+</footer>
+</html>

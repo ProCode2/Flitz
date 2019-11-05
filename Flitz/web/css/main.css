@@ -1,0 +1,50 @@
+html, body{ height:100%; margin:0; }
+header{ height:50px; background:lightcyan; }
+footer{ height:50px; background:PapayaWhip; }
+
+/* Trick */
+body{ 
+  display:flex; 
+  flex-direction:column; 
+}
+
+footer{
+  margin-top:auto; 
+}
+ 
+
+body {
+  background-color: #212121;;
+  color: white;
+}
+
+.card{
+	border-radius: 15px;
+	 border: 1px solid #c51162;
+}
+
+.username{
+	color: #c51162;
+	margin-left: 10px;
+	font-family: 'PT Sans', sans-serif;
+}
+
+.section{
+	background-image: linear-gradient(to right,#c51162,white);
+    margin-top: 0px;
+}
+
+form {
+  padding: 0px;
+  border: 1px solid #c51162;
+  background: #424242;
+  display: none;
+}
+#form1{
+	border-radius: 15px;
+	margin: 0px 30px 0px 30px;
+}
+
+#formButton{
+	margin-right: 30px;
+}
